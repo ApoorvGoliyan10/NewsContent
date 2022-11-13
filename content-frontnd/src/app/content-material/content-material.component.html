@@ -1,0 +1,71 @@
+<body>
+<header >
+ <h1>Daily News Blog</h1>
+</header>
+
+
+    <br>
+<div class="main">    
+ <button (click)="getAllContent()"><h2>Top Stories </h2></button>
+  <br>
+
+ <dl *ngFor="let data of newsdata.contentList">
+    <dt style="font-size: 150%;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-weight: bolder;">
+        {{data.newsid}}. {{data.headline}}</dt>
+    <dd>{{data.main}}</dd>
+    <dd style=" text-decoration: underline;">keyword tags:{{data.keyword}}</dd>
+ </dl>
+
+  <br>
+  <hr>
+
+
+
+ <h3>Add News</h3>
+ <form [formGroup]="addcontent" (ngSubmit)="addContent()">
+    <div>
+        <label for="newsid">News Id</label> <br>
+        <input type="text" formControlName="newsid">
+    </div>
+
+    <div>
+        <label for="headline">Headline</label> <br>
+        <input type="text" formControlName="headline">
+    </div>
+    <div>
+        <label for="main">Main</label> <br>
+        <input type="text" formControlName="main">
+    </div>
+
+    <div>
+        <label for="keywords">Tag</label> <br>
+        <input type="text" formControlName="keyword"> 
+    </div>
+    <br> <br>
+    <input type="submit" value="Post Story">
+    <br>
+    <br>
+  </form>
+ </div>  
+  <hr>
+  <br>
+ </body>
+
+<footer>
+ <!-- 
+ <h3>Remove News</h3>
+ <form [formGroup]="delcontent" (ngSubmit)="deleteContent()">
+    <div>
+        <label for="newsid">News Id</label> <br>
+        <input type="text" formControlName="newsid">
+    </div>
+     <br>
+    <input type="submit" value="Delete Story">
+    
+    <br>
+ </form> -->
+ 
+ <br>
+ <button style="background-color: red " (click)="logout()" ><a routerLink="/"> logout </a></button>
+</footer>
+

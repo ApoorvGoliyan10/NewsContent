@@ -1,0 +1,25 @@
+
+body {
+   background-color: rgb(60, 207, 161); 
+    background-image: url('src\assets\theme-image.jpg');
+     background-repeat: no-repeat; 
+     background-attachment: fixed;  
+     background-size: cover;
+  }
+  h1 {
+    background-color: rgb(214, 126, 33);
+    padding:  20px;
+    text-align: center;
+    font-size: xx-large;
+    font-style: oblique;
+    
+  }
+  h3{
+    text-decoration: underline;
+    font-weight: bold;
+     color: brown;
+  }
+
+  .main{
+    margin-left: 10px;
+  }
